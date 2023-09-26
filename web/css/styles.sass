@@ -8,15 +8,19 @@ html
     color: #9CCC65
 
 body
+    min-height: 100vh
+    position: relative
     background: white
+    display: flex
+    flex-direction: column
 
     @media (prefers-color-scheme: dark)
         background: #333
-
+    a
+        text-decoration: none
     section
         margin-top: 2rem
         margin-bottom: 2rem
-
     h2
         margin-bottom: 1rem
 
@@ -71,7 +75,6 @@ body
                     width: 50%
                 @media (max-width: 528px)
                     width: 100%
-
     .cta--section
         height: 100vh
         background-image: url("../src/SDGGame.webp")
@@ -109,6 +112,7 @@ body
         flex-direction: column
         justify-content: center
         align-items: center
+        margin-bottom: 20vh
 
         h2
             width: 95%
@@ -152,18 +156,65 @@ body
 
                         &:hover
                             width: 110%
+
+    .Front
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 5rem
+        font-family: sans-serif
+        color: black
+        @media (prefers-color-scheme: dark)
+            color: white
+    .contact
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+        gap: 3rem
+        margin-top: 3rem
+        div
+            display: flex
+            flex-direction: row
+            align-items: center
+            gap: 0.5rem
+            a
+                text-decoration: none
+                color: black
+                @media (prefers-color-scheme: dark)
+                    color: white
+                &:hover
+                    text-decoration: underline
+    .heading
+        font-size: 1.1rem
+        width: 55ch
+        position: absolute
+        right: 35%
+        top: 40%
+        color: black
+        @media (prefers-color-scheme: dark)
+            color: white
+
     footer
         display: flex
         flex-direction: row
-        justify-content: right
+        justify-content: space-between
+        position: absolute
+        align-items: center
+        height: 15vh
+        bottom: 0
+        left: 0
         width: 100%
         padding: 1.5rem
-
         background: #00000010
+        a
+            height: 100%
+            display: inline-block
+            img
+                height: 100%
         figure
             display: flex
             flex-direction: column
-
             a
                 text-decoration: none
                 color: black

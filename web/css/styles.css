@@ -10,12 +10,19 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  position: relative;
   background: white;
+  display: flex;
+  flex-direction: column;
 }
 @media (prefers-color-scheme: dark) {
   body {
     background: #333;
   }
+}
+body a {
+  text-decoration: none;
 }
 body section {
   margin-top: 2rem;
@@ -133,6 +140,7 @@ body .sdgs--section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20vh;
 }
 body .sdgs--section h2 {
   width: 95%;
@@ -183,13 +191,77 @@ body .sdgs--section figure div div img {
 body .sdgs--section figure div div img:hover {
   width: 110%;
 }
+body .Front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-family: sans-serif;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  body .Front {
+    color: white;
+  }
+}
+body .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+body .contact div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .contact div a {
+  text-decoration: none;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  body .contact div a {
+    color: white;
+  }
+}
+body .contact div a:hover {
+  text-decoration: underline;
+}
+body .heading {
+  font-size: 1.1rem;
+  width: 55ch;
+  position: absolute;
+  right: 35%;
+  top: 40%;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  body .heading {
+    color: white;
+  }
+}
 body footer {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  height: 15vh;
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding: 1.5rem;
   background: rgba(0, 0, 0, 0.062745098);
+}
+body footer a {
+  height: 100%;
+  display: inline-block;
+}
+body footer a img {
+  height: 100%;
 }
 body footer figure {
   display: flex;
