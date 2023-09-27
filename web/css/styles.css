@@ -161,6 +161,13 @@ body .sdgs--section figure {
     grid-template-columns: 1fr;
   }
 }
+body .sdgs--section figure div {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
 body .sdgs--section figure div h3 {
   color: black;
   gap: 0.5rem;
@@ -177,7 +184,7 @@ body .sdgs--section figure div h3 {
 }
 body .sdgs--section figure div div {
   width: 100%;
-  height: 80%;
+  height: 15rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -186,10 +193,10 @@ body .sdgs--section figure div div {
 }
 body .sdgs--section figure div div img {
   transition: all 0.3s;
-  width: 100%;
+  height: 100%;
 }
 body .sdgs--section figure div div img:hover {
-  width: 110%;
+  height: 110%;
 }
 body .Front {
   display: flex;

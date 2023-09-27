@@ -1,0 +1,24 @@
+{
+    "nl": {
+        "index": {
+            "Overview": "SDG Overzicht",
+            "PlaySDG":"Speel de SDG Game!",
+            "OurSDGs":"Onze SDGs"
+        },
+        "contact": {
+            "Title":"Neem contact op met ons"
+        }
+    },
+
+    "en": {
+        "index": {
+            "Overview": "SDG Overview",
+            "PlaySDG":"Play the SDG game!",
+            "OurSDGs":"Our SDGs"
+        },
+        "contact": {
+            "Title":"Contact us"
+        }
+    }
+   
+}
