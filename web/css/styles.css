@@ -57,16 +57,46 @@ body header a {
 body header a img {
   height: 100%;
 }
+@media (max-width: 368px) {
+  body header a img {
+    display: none;
+  }
+}
 body header figure {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 body header figure a {
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
+}
+body header figure div {
+  display: flex;
+  justify-content: space-between;
+  width: 5rem;
+  height: 100%;
+  align-items: center;
+}
+body header figure div .lang--button {
+  border: 1px solid black;
+  outline: none;
+  aspect-ratio: 3/2;
+  background: red;
+  width: 40%;
+  border-radius: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body header figure div #dutch--b {
+  background-image: url("../src/NL_Flag.webp");
+}
+body header figure div #english--b {
+  background-image: url("../src/EN_Flag.webp");
 }
 body .slider--section {
   padding-left: 1.5rem;
@@ -198,57 +228,67 @@ body .sdgs--section figure div div img {
 body .sdgs--section figure div div img:hover {
   height: 110%;
 }
-body .Front {
+body .contact--page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 748px) {
+  body .contact--page {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+body .contact--page .Front {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
-  font-family: sans-serif;
-  color: black;
+  text-align: center;
 }
-@media (prefers-color-scheme: dark) {
-  body .Front {
-    color: white;
+@media (max-width: 1048px) {
+  body .contact--page .Front {
+    font-size: 4rem;
   }
 }
-body .contact {
+@media (max-width: 748px) {
+  body .contact--page .Front {
+    font-size: 2.5rem;
+  }
+}
+body .contact--page .contact {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 3rem;
   margin-top: 3rem;
+  font-size: 1.3rem;
 }
-body .contact div {
+@media (max-width: 748px) {
+  body .contact--page .contact {
+    flex-direction: column;
+  }
+}
+body .contact--page .contact div {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
-body .contact div a {
+body .contact--page .contact div a {
   text-decoration: none;
   color: black;
 }
 @media (prefers-color-scheme: dark) {
-  body .contact div a {
+  body .contact--page .contact div a {
     color: white;
   }
 }
-body .contact div a:hover {
+body .contact--page .contact div a:hover {
   text-decoration: underline;
-}
-body .heading {
-  font-size: 1.1rem;
-  width: 55ch;
-  position: absolute;
-  right: 35%;
-  top: 40%;
-  color: black;
-}
-@media (prefers-color-scheme: dark) {
-  body .heading {
-    color: white;
-  }
 }
 body footer {
   display: flex;
@@ -285,4 +325,5 @@ body footer figure a {
 }
 body footer figure a:hover {
   text-decoration: underline;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */

@@ -46,17 +46,41 @@ body
 
             img
                 height: 100%
+                @media (max-width: 368px)
+                    display: none
 
         figure
             display: flex
             flex-direction: row
             justify-content: space-between
+            align-items: center
             gap: 2rem
 
             a
                 font-size: 1.2rem
                 text-decoration: none
                 font-weight: bold
+            div
+                display: flex
+                justify-content: space-between
+                width: 5rem
+                height: 100%
+                align-items: center
+                .lang--button
+                    border: 1px solid black
+                    outline: none
+                    aspect-ratio: 3/2
+                    background: red
+                    width: 40%
+                    border-radius: 5px
+                    background-position: center center
+                    background-repeat: no-repeat
+                    background-size: cover
+
+                #dutch--b
+                    background-image: url("../src/NL_Flag.webp")
+                #english--b
+                    background-image: url("../src/EN_Flag.webp")
     .slider--section
         padding-left: 1.5rem
         padding-right: 1.5rem
@@ -160,43 +184,52 @@ body
                         &:hover
                             height: 110%
 
-    .Front
+    .contact--page
+        min-height: 80vh
         display: flex
-        justify-content: center
+        flex-direction: column
+        justify-content: space-evenly
         align-items: center
-        font-size: 5rem
-        font-family: sans-serif
-        color: black
-        @media (prefers-color-scheme: dark)
-            color: white
-    .contact
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-direction: row
-        gap: 3rem
-        margin-top: 3rem
-        div
+        @media (max-width: 748px)
+            justify-content: center
+            gap: 2rem
+
+        .Front
+
             display: flex
-            flex-direction: row
+            justify-content: center
             align-items: center
-            gap: 0.5rem
-            a
-                text-decoration: none
-                color: black
-                @media (prefers-color-scheme: dark)
-                    color: white
-                &:hover
-                    text-decoration: underline
-    .heading
-        font-size: 1.1rem
-        width: 55ch
-        position: absolute
-        right: 35%
-        top: 40%
-        color: black
-        @media (prefers-color-scheme: dark)
-            color: white
+            font-size: 5rem
+            text-align: center
+
+            @media (max-width: 1048px)
+                font-size: 4rem
+            @media (max-width: 748px)
+                font-size: 2.5rem
+        .contact
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: row
+            gap: 3rem
+            margin-top: 3rem
+            font-size: 1.3rem
+
+            @media (max-width: 748px)
+                flex-direction: column
+
+            div
+                display: flex
+                flex-direction: row
+                align-items: center
+                gap: 0.5rem
+                a
+                    text-decoration: none
+                    color: black
+                    @media (prefers-color-scheme: dark)
+                        color: white
+                    &:hover
+                        text-decoration: underline
 
     footer
         display: flex
