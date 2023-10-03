@@ -8,7 +8,7 @@
 
 `MySQL & PHP`
 
-# LanguageHandler.js
+<a href="https://github.com/Arzoka/BOM5_Randiko/blob/main/public/js/LanguageHandler.js" target="_blank"><h2>LanguageHandler.js<h2></a>
 
 ## To get started with the LanguageHandler we have to understand how it's code is built.
 
