@@ -25,6 +25,11 @@ const doLanguageInput = (data) => {
   else if (document.getElementById("contact_title")) {
     document.getElementById("contact_title").innerHTML = data.contact.Title;
   }
+  // Checks if sdg.html by checking if sdg_title exists
+  else if (document.getElementById("sdg_title")) {
+    document.getElementById("sdg_title").innerHTML = data.sdg.Title;
+    document.getElementById("sdg_button").innerHTML = data.sdg.Button;
+  }
 };
 
 // Language to set language to dutch or english by using argument "lang", activated by english--b and dutch--b in header

@@ -7,6 +7,10 @@
         },
         "contact": {
             "Title":"Neem contact met ons op"
+        },
+        "sdg": {
+            "Title":"Wat houdt deze SDG in?",
+            "Button":"Check de SDG in de game!"
         }
     },
 
@@ -18,6 +22,10 @@
         },
         "contact": {
             "Title":"Contact us"
+        },
+        "sdg": {
+            "Title":"Wat does this SDG mean?",
+            "Button":"Check out the SDG in the game!"
         }
     }
    

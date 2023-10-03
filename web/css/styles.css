@@ -7,6 +7,7 @@
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #9CCC65;
+  letter-spacing: 0.04rem;
 }
 
 body {
@@ -98,35 +99,38 @@ body header figure div #dutch--b {
 body header figure div #english--b {
   background-image: url("../src/EN_Flag.webp");
 }
-body .slider--section {
+body .index--page {
+  min-height: 80vh;
+}
+body .index--page .slider--section {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
   flex-direction: column;
 }
-body .slider--section figure {
+body .index--page figure {
   display: flex;
   flex-direction: row;
   gap: 0.2rem;
   width: 100%;
   overflow-x: scroll;
 }
-body .slider--section figure img {
+body .index--page figure img {
   width: 33%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 748px) {
-  body .slider--section figure img {
+  body .index--page figure img {
     width: 50%;
   }
 }
 @media (max-width: 528px) {
-  body .slider--section figure img {
+  body .index--page figure img {
     width: 100%;
   }
 }
-body .cta--section {
+body .index--page .cta--section {
   height: 100vh;
   background-image: url("../src/SDGGame.webp");
   background-size: cover;
@@ -138,16 +142,16 @@ body .cta--section {
   align-items: center;
   padding: 5%;
 }
-body .cta--section h2 {
+body .index--page .cta--section h2 {
   font-size: 3rem;
   color: white;
 }
 @media (max-width: 528px) {
-  body .cta--section h2 {
+  body .index--page .cta--section h2 {
     font-size: 1.5rem;
   }
 }
-body .cta--section a {
+body .index--page .cta--section a {
   text-decoration: none;
   cursor: pointer;
   background: #9CCC65;
@@ -161,44 +165,45 @@ body .cta--section a {
   border: 3px solid white;
   transition: all 0.3s;
 }
-body .cta--section a:hover {
+body .index--page .cta--section a:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0px 0px 10px white;
 }
-body .sdgs--section {
+body .index--page .sdgs--section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20vh;
 }
-body .sdgs--section h2 {
+body .index--page .sdgs--section h2 {
   width: 95%;
 }
-body .sdgs--section figure {
+body .index--page .sdgs--section figure {
   display: grid;
   width: 95%;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-x: hidden;
 }
 @media (max-width: 748px) {
-  body .sdgs--section figure {
+  body .index--page .sdgs--section figure {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 528px) {
-  body .sdgs--section figure {
+  body .index--page .sdgs--section figure {
     grid-template-columns: 1fr;
   }
 }
-body .sdgs--section figure div {
+body .index--page .sdgs--section figure div {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 0.5rem;
 }
-body .sdgs--section figure div h3 {
+body .index--page .sdgs--section figure div h3 {
   color: black;
   gap: 0.5rem;
   display: flex;
@@ -208,11 +213,11 @@ body .sdgs--section figure div h3 {
   overflow: hidden;
 }
 @media (prefers-color-scheme: dark) {
-  body .sdgs--section figure div h3 {
+  body .index--page .sdgs--section figure div h3 {
     color: white;
   }
 }
-body .sdgs--section figure div div {
+body .index--page .sdgs--section figure div div {
   width: 100%;
   height: 15rem;
   display: flex;
@@ -221,12 +226,13 @@ body .sdgs--section figure div div {
   align-items: center;
   overflow: hidden;
 }
-body .sdgs--section figure div div img {
+body .index--page .sdgs--section figure div div img {
+  min-width: 100%;
   transition: all 0.3s;
   height: 100%;
 }
-body .sdgs--section figure div div img:hover {
-  height: 110%;
+body .index--page .sdgs--section figure div div img:hover {
+  transform: scale(1.05);
 }
 body .contact--page {
   min-height: 80vh;
@@ -290,6 +296,104 @@ body .contact--page .contact div a {
 body .contact--page .contact div a:hover {
   text-decoration: underline;
 }
+body .sdg--page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 105vh;
+}
+@media (max-width: 1048px) {
+  body .sdg--page {
+    min-height: 150vh;
+  }
+}
+@media (max-width: 428px) {
+  body .sdg--page {
+    min-height: 180vh;
+  }
+}
+body .sdg--page section {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+@media (max-width: 1048px) {
+  body .sdg--page section {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+body .sdg--page section figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  gap: 1rem;
+}
+@media (max-width: 1048px) {
+  body .sdg--page section figure {
+    width: 80%;
+    align-items: flex-start;
+  }
+}
+body .sdg--page section figure h1 {
+  font-size: 2rem;
+}
+body .sdg--page section figure img {
+  width: 75%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 528px) {
+  body .sdg--page section figure img {
+    width: 100%;
+  }
+}
+body .sdg--page section article {
+  width: 35%;
+}
+@media (max-width: 1048px) {
+  body .sdg--page section article {
+    width: 80%;
+  }
+}
+body .sdg--page section article p {
+  font-size: 1.5rem;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  body .sdg--page section article p {
+    color: white;
+  }
+}
+body .sdg--page section article h2 {
+  font-size: 2rem;
+}
+body .sdg--page a {
+  text-decoration: none;
+  cursor: pointer;
+  background: #9CCC65;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  border: 3px solid white;
+  transition: all 0.3s;
+}
+@media (max-width: 528px) {
+  body .sdg--page a {
+    font-size: 1rem;
+    padding: 2rem;
+    font-weight: bold;
+  }
+}
+body .sdg--page a:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0px 0px 10px white;
+}
 body footer {
   display: flex;
   flex-direction: row;
@@ -325,5 +429,4 @@ body footer figure a {
 }
 body footer figure a:hover {
   text-decoration: underline;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
