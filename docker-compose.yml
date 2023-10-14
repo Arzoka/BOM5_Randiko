@@ -9,6 +9,7 @@ services:
       - db
     volumes:
       - ./public:/var/www/html/
+      - ./app:/var/www/html/app
     ports:
       - "6969:80"
   db:

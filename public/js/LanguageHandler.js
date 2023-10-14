@@ -15,7 +15,7 @@ const doLanguageCheck = () => {
 
 // Actually changes text to text in data.json
 const doLanguageInput = (data) => {
-  // checks if index.html by checking if SDG_Overview exists
+  // checks if index.php by checking if SDG_Overview exists
   if (document.getElementById("SDG_Overview")) {
     document.getElementById("SDG_Overview").innerHTML = data.index.Overview;
     document.getElementById("play_SDG").innerHTML = data.index.PlaySDG;

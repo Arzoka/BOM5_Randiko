@@ -54,7 +54,7 @@ We have LanguageHandler.js, although it may seem intimidating at first, there's 
 ```js
 // Actually changes text to text in data.json
 const doLanguageInput = (data) => {
-  // checks if index.html by checking if SDG_Overview exists
+  // checks if index.php by checking if SDG_Overview exists
   if (document.getElementById("SDG_Overview")) {
     document.getElementById("SDG_Overview").innerHTML = data.index.Overview;
     document.getElementById("play_SDG").innerHTML = data.index.PlaySDG;
@@ -86,7 +86,7 @@ The only thing it doesn't send is the page we're currently on, for this we use a
 if (document.getElementById("SDG_Overview")) { ...
 ```
 
-This essentially just checks if a certain element with an ID exists on the current loaded html, in this case this would check if index.html exists because index.html has:
+This essentially just checks if a certain element with an ID exists on the current loaded html, in this case this would check if index.php exists because index.php has:
 
 ```html
 <h2 id="SDG_Overview">SDG Overview</h2>
@@ -100,7 +100,7 @@ document.getElementById("play_SDG").innerHTML = data.index.PlaySDG;
 document.getElementById("our_SDGs").innerHTML = data.index.OurSDGs;
 ```
 
-We're using the ID's on the page, for this that is index.html and it has the ID's
+We're using the ID's on the page, for this that is index.php and it has the ID's
 
 ```html
 ...

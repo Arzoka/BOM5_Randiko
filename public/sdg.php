@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+require 'app/conf/config.php';
+require 'app/views/sdg.php';
+?>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,11 +18,11 @@
 
 <body>
   <header>
-    <a href="index.html">
+    <a href="index.php">
       <img src="src/Nvvn_Logo.png" alt="/" />
     </a>
     <figure>
-      <a href="index.html">Home</a>
+      <a href="index.php">Home</a>
       <a href="contact.html" class="header--contact">Contact</a>
       <div>
         <div id="dutch--b" class="lang--button" onclick="setLanguage('dutch')"></div>
@@ -28,20 +33,22 @@
   <main class="sdg--page">
     <section>
       <figure>
-        <h1>SDG name</h1>
-        <img src="src/Placeholder.webp" alt="placeholder">
+        <h1><?php echo $sdg["title"] ?></h1>
+        <div style="background: <?php echo $sdg["color"] ?> ;">
+          <img src=<?php echo $sdg["icon"] ?> alt=<?php echo $sdg["title"] ?>>
+        </div>
+
       </figure>
       <article>
         <h2 id="sdg_title">Wat houdt deze SDG in?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro sit fugit odio illo commodi
-          nesciunt non, alias omnis cupiditate a quia dolor tempore earum quasi, quod laudantium, cumque consectetur!
+        <p><?php echo $sdg["description"] ?>
         </p>
       </article>
     </section>
-    <a id="sdg_button">Check it out in the game!</a>
+    <a href=<?php echo $sdg["link"] ?> target="_blank" id="sdg_button">Check it out in the game!</a>
   </main>
   <footer>
-    <a href="index.html">
+    <a href="index.php">
       <img src="src/Randiko_Logo.svg" alt="/" />
     </a>
     <figure>

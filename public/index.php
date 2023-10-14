@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+require 'app/conf/config.php';
+require 'app/views/sdgs.php';
+?>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,11 +17,11 @@
 
 <body>
   <header>
-    <a href="index.html">
+    <a href="index.php">
       <img src="src/Nvvn_Logo.png" alt="/" />
     </a>
     <figure>
-      <a href="index.html">Home</a>
+      <a href="index.php">Home</a>
       <a href="contact.html" class="header--contact">Contact</a>
       <div>
         <div id="dutch--b" class="lang--button" onclick="setLanguage('dutch')"></div>
@@ -29,11 +34,17 @@
     <section class="slider--section">
       <h2 id="SDG_Overview">SDG Overview</h2>
       <figure>
-        <img src="src/Placeholder.webp" alt="/" />
-        <img src="src/Placeholder.webp" alt="/" />
-        <img src="src/Placeholder.webp" alt="/" />
-        <img src="src/Placeholder.webp" alt="/" />
-        <img src="src/Placeholder.webp" alt="/" />
+        <?php
+        $i = 1;
+        foreach ($sdgs as $sdg) {
+        ?>
+          <a href="sdg.php?id=<?php echo $i ?>" style="background: <?php echo $sdg["color"] ?> ;">
+            <img src=<?php echo $sdg["icon"] ?> alt=<?php echo $sdg["title"] ?> />
+          </a>
+
+        <?php
+          $i++;
+        } ?>
       </figure>
     </section>
     <section class="cta--section">
@@ -43,47 +54,26 @@
     <section class="sdgs--section">
       <h2 id="our_SDGs">Onze SDGs</h2>
       <figure>
-        <div>
-          <h3>SDG 1</h3>
-          <div>
-            <img src="src/Placeholder.webp" alt="/" />
-          </div>
-        </div>
-        <div>
-          <h3>SDG 2</h3>
-          <div>
-            <img src="src/Placeholder.webp" alt="/" />
-          </div>
-        </div>
-        <div>
-          <h3>SDG 3</h3>
-          <div>
-            <img src="src/Placeholder.webp" alt="/" />
-          </div>
-        </div>
-        <div>
-          <h3>SDG 4</h3>
-          <div>
-            <img src="src/Placeholder.webp" alt="/" />
-          </div>
-        </div>
-        <div>
-          <h3>SDG 5</h3>
-          <div>
-            <img src="src/Placeholder.webp" alt="/" />
-          </div>
-        </div>
-        <div>
-          <h3>SDG 6</h3>
-          <div>
-            <img src="src/Placeholder.webp" alt="/" />
-          </div>
-        </div>
+        <?php
+        $i = 1;
+        foreach ($sdgs as $sdg) {
+        ?>
+          <a href="sdg.php?id=<?php echo $i ?>" target="_blank">
+            <h3><?php echo $sdg["title"] ?></h3>
+            <div style="background: <?php echo $sdg["color"] ?> ;">
+              <img src=<?php echo $sdg["icon"] ?> alt=<?php echo $sdg["title"] ?> />
+            </div>
+          </a>
+
+        <?php
+          $i++;
+        } ?>
+
       </figure>
     </section>
   </main>
   <footer>
-    <a href="index.html">
+    <a href="index.php">
       <img src="src/Randiko_Logo.svg" alt="/" />
     </a>
     <figure>
