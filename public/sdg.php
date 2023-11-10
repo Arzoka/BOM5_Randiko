@@ -13,7 +13,7 @@ require 'app/views/sdg.php';
   <script src="js/LanguageHandler.js" defer></script>
   <script src="https://kit.fontawesome.com/31ba87c7ce.js" crossorigin="anonymous"></script>
   <link rel="icon" href="src/Randiko_Logo.svg" type="image/x-icon" />
-  <title>Contact</title>
+  <title><?php echo $sdg['title'];  ?></title>
 </head>
 
 <body>
